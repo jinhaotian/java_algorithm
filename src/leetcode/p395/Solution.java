@@ -1,4 +1,4 @@
-package p395;
+package leetcode.p395;
 
 import org.junit.Test;
 
@@ -33,8 +33,11 @@ public class Solution {
         int iend=istart;
         while(curr<end){
             if (counts[s.charAt(curr)-'a']<k){
-                int t = max( s, k,  istart, curr);
-                if(t>max) max=t;
+            	
+            	if(curr-istart>=k){
+            		 int t = max( s, k,  istart, curr);
+            		 if(t>max) max=t;
+                }
                 curr++;
                 while(curr<end&&counts[s.charAt(curr)-'a']<k){
                 	curr++;
