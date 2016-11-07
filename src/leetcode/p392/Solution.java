@@ -1,9 +1,15 @@
 package leetcode.p392;
 
+import org.junit.Test;
+
 public class Solution {
 
 	
-	 public boolean isSubsequence(String s, String t) {
+	@Test
+	public  void test(){
+		isSubsequence("asdfasdf","asdfasdfasdf");
+	}
+	public boolean isSubsequence(String s, String t) {
 		 if(s.length()==0) return true;
 		 
 		 int current =0;
